@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<HTML>
+ <HEAD>
+  <TITLE></TITLE>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script src="../static/js/vue-2.2.2.min.js"></script>
+  <script src="../static/js/vue-router.min.js"></script>
+  <!--
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+-->
+
+<link rel="stylesheet" href="../static/js/element-ui-2.0.8/lib/theme-chalk/index.css">
+<script src="../static/js/element-ui-2.0.8/lib/index.js"></script>
+
+ </HEAD>
+
+ <body>
+ <div id="app">
+    <h3>路由测试</h3>
+     <p>
+         <!-- 使用 router-link 组件来导航. -->
+         <!-- 通过传入 `to` 属性指定链接. -->
+         <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+         <router-link to="/view1">Go to view1</router-link>
+         <router-link to="/view2">Go to view2</router-link>
+         <router-link to="/view/杨">Go to viewParam</router-link>
+     </p>
+     <!-- 路由出口 -->
+     <!-- 路由匹配到的组件将渲染在这里 -->
+     <router-view></router-view>
+
+ </div>
+
+<script type="module">
+import {routes} from "../modules/test/routes/routes.js"
+
+const router = new VueRouter({
+    routes,
+})
+
+const app = new Vue({
+    router,
+}).$mount('#app')
+
+</script>
+ </body>
+ </html>

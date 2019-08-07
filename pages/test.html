@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<HTML>
+ <HEAD>
+  <TITLE></TITLE>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script src="../static/js/vue-2.2.2.min.js"></script>
+  <!--
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+-->
+
+  <!--
+<link rel="stylesheet" href="static/js/element-ui-2.0.8/lib/theme-chalk/index.css">
+<script src="static/js/element-ui-2.0.8/lib/index.js"></script>
+-->
+
+ </HEAD>
+
+ <body>
+ <div id="app">
+  <h3>组件测试</h3>
+  <my-button :disabled="true"></my-button>
+  <my-button></my-button>
+
+ </div>
+
+
+
+<script type="module">
+//import {MyButton} from "./components/index.js"
+import MyButton from "../components/MyButton/MyButton.js"
+
+  var appVue = new Vue({
+	el:"#app",
+   components:{
+	 'my-button':MyButton
+   },
+    data(){
+		return {
+
+
+		}
+    },
+    methods: {
+       handleChange(value) {
+        console.log(value);
+      }
+    },
+   mounted:function () {
+    console.log(MyButton)
+   }
+  });
+</script>
+ </body>
+ </html>

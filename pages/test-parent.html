@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<HTML>
+ <HEAD>
+  <TITLE></TITLE>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script src="../static/js/vue-2.2.2.min.js"></script>
+  <!--
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+-->
+
+  <!--
+<link rel="stylesheet" href="static/js/element-ui-2.0.8/lib/theme-chalk/index.css">
+<script src="static/js/element-ui-2.0.8/lib/index.js"></script>
+-->
+
+ </HEAD>
+
+ <body>
+ <div id="app">
+  <h3>父组件测试</h3>
+  <parent-button></parent-button>
+
+ </div>
+
+<script type="module">
+//import {MyButton} from "./components/index.js"
+import ParentButton from "../components/ParentButton/ParentButton.js"
+
+  var appVue = new Vue({
+	el:"#app",
+   components:{
+	 'parent-button':ParentButton
+   },
+    data(){
+		return {
+
+
+		}
+    },
+    methods: {
+       handleChange(value) {
+        console.log(value);
+      }
+    },
+   mounted:function () {
+    console.log(ParentButton)
+   }
+  });
+</script>
+ </body>
+ </html>
