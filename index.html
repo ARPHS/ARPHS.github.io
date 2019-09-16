@@ -16,6 +16,7 @@
 
  <body>
 	 <a href="http://localhost:8011/frontEnd">跳转测试</a>
+<a onclick="jsTo()">跨域测试</a>
  <div id="app">
 <h3>ElementUI 组件测试</h3>
 <div class="block">
@@ -33,6 +34,9 @@
 
 
 <script>
+	function jsTo(){
+		window.href="http://localhost:8011/frontEnd"
+	}
   var appVue = new Vue({
 	el:"#app",
     data(){
